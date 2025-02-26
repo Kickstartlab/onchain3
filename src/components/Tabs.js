@@ -51,14 +51,14 @@ const VerticalTabs = () => {
     const [activeTab, setActiveTab] = useState("smm");
 
     return (
-        <div className="flex flex-wrap justify-center md:gap-20 gap-8 p-10">
+        <div className="flex flex-wrap justify-center md:gap-20 gap-8">
             {/* Left Sidebar (Tabs) */}
-            <div className="w-4/12 space-y-4">
+            <div className="lg:w-4/12 w-full lg:space-y-4 lg:block flex gap-x-3 lg:overflow-hidden overflow-x-scroll">
                 {tabs.map((tab) => (
                     <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id)}
-                        className={`w-full text-left px-6 py-3 rounded-2xl border
+                        className={`w-full text-left px-6 lg:py-3 py-1 rounded-2xl border lg:text-base text-xs
               ${activeTab === tab.id ? "border-blue-50 text-blue-50" : "border-white-50"}`}
                     >
                         {tab.title}
@@ -67,7 +67,7 @@ const VerticalTabs = () => {
             </div>
 
             {/* Right Content Panel (Image First) */}
-            <div className="w-6/12 flex justify-center">
+            <div className="lg:w-6/12 flex justify-center">
                 <motion.div
                     key={activeTab}
                     initial={{ opacity: 0, y: 20 }}

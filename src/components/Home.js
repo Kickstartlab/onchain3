@@ -132,7 +132,7 @@ export default function Home() {
                     <div className='flex flex-wrap items-start justify-center gap-6 lg:mt-24 mt-12'>
 
                         <div className='lg:w-1/6 md:w-1/2 w-full space-y-12'>
-                            <div className='md:w-44 w-28 md:h-44 h-28 flex items-center justify-center rounded-full border border-blue-50 mx-auto'>
+                            <div className='md:w-44 w-24 md:h-44 h-24 flex items-center justify-center rounded-full border border-blue-50 mx-auto'>
                                 <p className='font-bold lg:text-7xl md:text-5xl text-4xl'>+7</p>
                             </div>
 
@@ -140,7 +140,7 @@ export default function Home() {
                         </div>
 
                         <div className='lg:w-1/6 md:w-1/2 w-full space-y-12'>
-                            <div className='md:w-44 w-28 md:h-44 h-28 flex items-center justify-center rounded-full border border-blue-50 mx-auto'>
+                            <div className='md:w-44 w-24 md:h-44 h-24 flex items-center justify-center rounded-full border border-blue-50 mx-auto'>
                                 <p className='font-bold md:text-4xl text-2xl'>$10M</p>
                             </div>
 
@@ -148,7 +148,7 @@ export default function Home() {
                         </div>
 
                         <div className='lg:w-1/6 md:w-1/2 w-full space-y-12'>
-                            <div className='md:w-44 w-28 md:h-44 h-28 flex items-center justify-center rounded-full border border-blue-50 mx-auto'>
+                            <div className='md:w-44 w-24 md:h-44 h-24 flex items-center justify-center rounded-full border border-blue-50 mx-auto'>
                                 <p className='font-bold md:text-4xl text-2xl'>100+</p>
                             </div>
 
@@ -156,7 +156,7 @@ export default function Home() {
                         </div>
 
                         <div className='lg:w-1/6 md:w-1/2 w-full space-y-12'>
-                            <div className='md:w-44 w-28 md:h-44 h-28 flex items-center justify-center rounded-full border border-blue-50 mx-auto'>
+                            <div className='md:w-44 w-24 md:h-44 h-24 flex items-center justify-center rounded-full border border-blue-50 mx-auto'>
                                 <p className='font-bold md:text-4xl text-2xl'>30</p>
                             </div>
 
@@ -217,7 +217,7 @@ export default function Home() {
 
             {/* tabs section */}
 
-            <div className="lg:px-20 px-5 lg:py-20 py-6">
+            <div className="lg:px-20 px-5 lg:py-20 py-10">
                 <div className='container mx-auto'>
 
                     <Tabs />
