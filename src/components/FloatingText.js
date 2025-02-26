@@ -1,45 +1,41 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const words = [
-    "Crypto", "Blockchain", "NFTs", "DeFi", "Web3", "Security", "Tokens", "Finance"
-];
-
-// Generate random positions for each text element
-const randomPosition = () => ({
-    x: Math.random() * 100 - 50, // Random X movement
-    y: Math.random() * 100 - 50, // Random Y movement
-    rotate: Math.random() * 15 - 7.5, // Random slight rotation
-});
+const topics = ["Crypto", "DeFi", "Web 3", "Gamefi", "Metaverse"];
 
 const FloatingText = () => {
-    return (
-        <div className="hero-container">
-            {/* SVG Border Animation */}
-            <svg className="animated-border" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <motion.rect
-                    x="1" y="1" width="98" height="98"
-                    stroke="url(#gradient)" fill="transparent"
-                    strokeWidth="2"
-                    strokeDasharray="400"
-                    strokeDashoffset="400"
-                    animate={{ strokeDashoffset: [400, 0] }}
-                    transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
-                />
-                <defs>
-                    <linearGradient id="gradient">
-                        <stop offset="0%" stopColor="red" />
-                        <stop offset="50%" stopColor="blue" />
-                        <stop offset="100%" stopColor="purple" />
-                    </linearGradient>
-                </defs>
-            </svg>
+  return (
+    <div className="flex justify-center items-center bg-black">
+      <div className="relative grid grid-cols-3 gap-8">
+        {Array.from({ length: 9 }).map((_, index) => {
+          const topic = topics[index] || ""; // Assign labels to some boxes, keep others empty
+          const hasGlow = topic !== ""; // Only labeled boxes have animated glow
 
-            {/* Hero Content */}
-            <h1 className="hero-title">Welcome to Coinband</h1>
-            <p className="hero-subtitle">Promoting crypto, blockchain, and Web3 projects</p>
-        </div>
-    );
+          return (
+            <motion.div
+              key={index}
+              className={`box w-28 h-28 flex justify-center items-center text-gray-500 rounded-lg border ${
+                hasGlow ? "glow-box text-lime-400" : "border-gray-700"
+              }`}
+              initial={{ y: Math.random() * 10 - 5, opacity: 0 }}
+              animate={{
+                y: [0, -5, 0, 5, 0], // Floating effect
+                opacity: 1,
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              whileHover={{ scale: 1.1, boxShadow: hasGlow ? "0px 0px 15px lime" : "none" }}
+            >
+              {topic}
+            </motion.div>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default FloatingText;

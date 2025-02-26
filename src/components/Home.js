@@ -72,12 +72,12 @@ export default function Home() {
     return (
         <div className="bg-black-50 font-montserat overflow-hidden text-white-100 m-0">
 
-            <div className="lg:px-20 px-5 lg:h-screen">
+            <div className="lg:px-20 px-5">
                 <div className='container mx-auto'>
 
                     <Menu />
 
-                    <div className="lg:flex justify-center items-center gap-y-12 lg:py-28 py-12">
+                    <div className="lg:flex justify-between items-center gap-y-12 lg:py-28 py-12">
                         <div className='lg:w-1/2'>
                             <div className='md:space-y-8 space-y-3 '>
                                 <p className='md:text-2xl text-lg font-semibold'>Onchain 3 Transforming</p>
@@ -93,7 +93,7 @@ export default function Home() {
                         </div>
 
                         <div className='lg:w-1/2'>
-                            {/* <FloatingText /> */}
+                            <FloatingText />
                         </div>
                     </div>
 
@@ -197,7 +197,7 @@ export default function Home() {
             <div className="lg:px-20 px-5 lg:py-20 py-6">
                 <div className='container mx-auto'>
 
-                    <div className='grid md:grid-cols-3 grid-cols-1 items-center justify-center gap-3 grid-rows-2'>
+                    <div className='grid md:grid-cols-3 grid-cols-1 items-center justify-center gap-3 lg:w-11/12 mx-auto'>
                         <div className='col-span-2 rounded-2xl bg-[#131313] border border-blue-50 p-20'>
 
                         </div>

@@ -82,3 +82,24 @@
 .open .triangle::after {
   transform: rotateY(0deg);
 }
+
+@keyframes glowing-border {
+  0% {
+    border-color: rgba(181, 255, 93, 0.3);
+    box-shadow: 0 0 5px rgba(181, 255, 93, 0.3);
+  }
+  50% {
+    border-color: rgba(181, 255, 93, 1);
+    box-shadow: 0 0 15px rgba(181, 255, 93, 1);
+  }
+  100% {
+    border-color: rgba(181, 255, 93, 0.3);
+    box-shadow: 0 0 5px rgba(181, 255, 93, 0.3);
+  }
+}
+
+.glow-box {
+  border: 2px solid;
+  animation: glowing-border 2s infinite alternate;
+}
+
