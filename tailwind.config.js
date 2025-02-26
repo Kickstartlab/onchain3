@@ -6,8 +6,7 @@ module.exports = {
     colors: {
 
       black: {
-        "25": "rgba(255, 255, 255, 0.03);",
-        "50": "#161b1c",
+        "50": "#010712",
         "100": "#000",
       },
       white: {
@@ -21,7 +20,8 @@ module.exports = {
     },
     fontFamily: {
       'montserat': ["'Montserrat', serif"],
-      'poppins': ["'Poppins', serif"]
+      'poppins': ["'Poppins', serif"],
+      'bruno': ["'Bruno Ace', serif"]
     }
   },
   plugins: [],

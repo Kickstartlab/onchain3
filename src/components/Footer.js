@@ -1,82 +1,65 @@
 import React from 'react'
-import icon_1 from '../assets/icon_1.png';
-import icon_2 from '../assets/icon_2.png';
-import icon_3 from '../assets/icon_3.png';
-import icon_4 from '../assets/icon_4.png';
-import icon_5 from '../assets/icon_5.png';
-import icon_6 from '../assets/icon_6.png';
-import logo_1 from '../assets/logo_1.png';
+import telegram from '../assets/telegram.png';
+import X from '../assets/X.png';
+import footer from '../assets/footer.png';
+
 
 
 
 export default function Footer() {
   return (
-    <div className="font-inter bg-img">
+    <div className="m-0">
 
-      <footer className='relative text-white-100 mx-auto lg:px-20 font-inter px-5'>
+      <footer className='text-white-100 lg:pl-20 m-0'>
 
-        <div data-aos="zoom-in" data-aos-delay="350" className='absolute right-0 left-1/2 -ml-56 -mt-12 lg:block hidden'>
-          <img src={logo_1} alt="Logo" className='' />
-        </div>
+        <div className="lg:flex block justify-between items-center gap-x-4 lg:pt-12">
 
-        <div className="lg:flex block justify-between items-center gap-x-44 lg:py-20">
 
-          <div data-aos="fade-right" className="lg:w-1/3 w-full text-white-50">
+          <div className='lg:w-3/12 w-full flex items-start gap-x-6 lg:p-0 p-5'>
+            <div className='space-y-8'>
+              <a href="/" className="">
+                <div className='flex items-center gap-x-2 text-2xl'>
+                  <p className='bg-blue-50 rounded-md px-1 font-extrabold text-black-100'>O3</p>
+                  <p className='font-extrabold'>Onchain 3</p>
+                </div>
+              </a>
 
-            <h2 className='md:text-2xl text-xl'>
-              Don't miss out, Stay updated
-            </h2>
+              <p>
+                Centric aplications productize before front
+                end vortals visualize front end is results and
+                value added
+              </p>
 
-            <p className='py-5'>
-              Don’t hesitate to subscribe to latest news about $ARBC
-            </p>
+              <nav>
+                <ul className="space-y-5">
+                  <li><a href="/" className="">Home</a></li>
+                  <li><a href="#about" className="">About us</a></li>
+                  <li><a href="#services" className="">Services</a></li>
+                  <li><a href="/" className="">Company</a></li>
+                  <li><a href="/" className="">Contacts</a></li>
+                  <li><a href="/" className="">Privacy Policy</a></li>
+                  <li><a href="/" className="">Terms of Service</a></li>
+                </ul>
+              </nav>
+            </div>
 
-            <a href="/">
-              <button className="text-white-100 btn-custom py-4 flex items-center gap-x-2 md:text-lg text-sm md:px-8 px-3 font-semibold mt-6">
-                Sign up For the Newsletter
-                <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                    <path fillRule="evenodd" d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z" clipRule="evenodd" />
-                  </svg>
-                </span>
-              </button>
-            </a>
+            <div className='w-5/12 space-y-12'>
+              <a href='/' className='rounded-full border border-blue-50 flex items-center justify-center p-2 w-10 h-10'>
+                <img src={telegram} alt='telegram'></img>
+              </a>
+
+              <a href='/' className='rounded-full border border-blue-50 flex items-center justify-center p-2 w-10 h-10'>
+                <img src={X} alt='X'></img>
+              </a>
+            </div>
           </div>
 
-          <div data-aos="fade-left" className="lg:w-1/3 w-full">
-
-            <p className='py-5 text-white-50'>
-              Arbitrum Classic is a decentralized finance project that operates on the Arbitrum chain. This innovative project introduces a unique reward system that offers investors the opportunity to receive Arbitrum tokens simply by holding Arbitrum Classic tokens.
-            </p>
-
+          <div className='lg:w-9/12'>
+            <img src={footer} alt='' className='relative right-0'></img>
           </div>
 
         </div>
 
-        <div className='flex flex-wrap justify-between items-center'>
-          <p className='pt-12 pb-6 text-white-50'>Copyright © {new Date().getFullYear()} Airbtrum Classic. All rights reserved.</p>
-
-          <div className='flex items-center'>
-            <a href='/'>
-              <img src={icon_1} alt=''></img>
-            </a>
-            <a href='/'>
-              <img src={icon_2} alt=''></img>
-            </a>
-            <a href='/'>
-              <img src={icon_3} alt=''></img>
-            </a>
-            <a href='/'>
-              <img src={icon_4} alt=''></img>
-            </a>
-            <a href='/'>
-              <img src={icon_5} alt=''></img>
-            </a>
-            <a href='/'>
-              <img src={icon_6} alt=''></img>
-            </a>
-          </div>
-        </div>
       </footer>
     </div>
 

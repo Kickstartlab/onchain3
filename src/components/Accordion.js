@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { FaChevronDown } from "react-icons/fa";
 
 const faqs = [
   {
@@ -30,38 +29,45 @@ const faqs = [
 ];
 
 export default function Accordion() {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [openItems, setOpenItems] = useState(faqs.map(() => false));
 
   const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+    setOpenItems((prev) => {
+      const newOpenItems = [...prev];
+      newOpenItems[index] = !newOpenItems[index];
+      return newOpenItems;
+    });
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 space-y-3">
+    <div className="p-6 space-y-3">
       {faqs.map((faq, index) => (
         <div
           key={faq.id}
-          className="border border-blue-500 rounded-lg bg-gray-900 text-white"
+          className={`border border-[#CDFEE6CC] rounded-lg text-white relative ${
+            openItems[index] ? "open" : ""
+          }`}
         >
           <button
             className="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold relative"
             onClick={() => toggleAccordion(index)}
           >
-            <span>
-              <span className="text-blue-400">{faq.id.toString().padStart(2, "0")}</span>{" "}
-              {faq.question}
+            <span className="flex items-center space-x-2">
+              <span className="text-cyan-400 text-xl font-mono">
+                {faq.id.toString().padStart(2, "0")}
+              </span>
+              <span>{faq.question}</span>
             </span>
-            <div className="bg-blue-500 p-2 rounded-tr-lg rounded-br-lg">
-              <FaChevronDown
-                className={`text-white transition-transform duration-300 ${
-                  activeIndex === index ? "rotate-180" : ""
-                }`}
-              />
+
+            {/* Right Side Triangular Toggle Button */}
+            <div className="absolute right-0 top-0 h-full flex items-center">
+              <div className={`triangle ${openItems[index] ? "open" : ""}`}></div>
             </div>
           </button>
+
           <div
             className={`overflow-hidden transition-all duration-300 ${
-              activeIndex === index ? "max-h-40 py-2 px-6" : "max-h-0"
+              openItems[index] ? "max-h-40 py-2 px-6" : "max-h-0"
             }`}
           >
             <p className="text-gray-300">{faq.answer}</p>
