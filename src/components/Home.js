@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Footer from './Footer'
 import Menu from './Menu'
 import brand_1 from '../assets/brand_1.png';
@@ -10,16 +10,64 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import FloatingText from './FloatingText';
 import Accordion from './Accordion';
+import Tabs from './Tabs';
 
 
 export default function Home() {
 
+    const paragraph =
+        "Onchain3 was founded by Web3 marketing experts with years of hands-on experience. From the start, we’ve focused on delivering results, not just buzz. With a track record of successfully promoting over 50 Web3 projects, we’ve learned exactly what works—and what doesn’t. We’re here to help Web3 projects grow, thrive, and reach the right audience, with proven strategies that deliver real impact.";
+
+    const words = paragraph.split(" ");
+    const sectionRef = useRef(null);
+    const [scrollProgress, setScrollProgress] = useState(0);
+    const [isInView, setIsInView] = useState(false);
+
     useEffect(() => {
-        Aos.init({
-            duration: 3000,
-        });
-        Aos.refresh();
-    }, [])
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsInView(entry.isIntersecting);
+            },
+            { threshold: 0.1 } // Trigger when 10% of the section is visible
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!sectionRef.current) return;
+
+            const rect = sectionRef.current.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            if (rect.top < windowHeight && rect.bottom > 0) {
+                const progress = 1 - Math.max(0, rect.top / windowHeight);
+                setScrollProgress(progress);
+            }
+        };
+
+        if (isInView) {
+            window.addEventListener("scroll", handleScroll);
+            handleScroll(); // Initial check in case already in view
+        } else {
+            setScrollProgress(0); // Reset if out of view
+        }
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [isInView]);
+
+    const getColor = (index) => {
+        const opacity = Math.min(1, 0.38 + (scrollProgress * index) / words.length);
+        return `rgba(255, 255, 255, ${opacity})`;
+    };
 
     return (
         <div className="bg-black-50 font-montserat overflow-hidden text-white-100 m-0">
@@ -119,16 +167,174 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* features section */}
-
-            <div id='features' className="lg:px-20 px-5">
+            <div className="lg:px-20 px-5 lg:py-20 py-6">
                 <div className='container mx-auto'>
 
+                    <div className="bg-black flex items-center justify-center">
+                        <div ref={sectionRef} className="p-6 max-w-3xl text-3xl font-bold">
+                            <p className="text-lg font-medium flex flex-wrap leading-relaxed sticky top-16">
+                                {words.map((word, index) => (
+                                    <span
+                                        key={index}
+                                        style={{
+                                            color: getColor(index),
+                                            transition: "color 0.5s ease-in-out",
+                                        }}
+                                        className="mr-1"
+                                    >
+                                        {word}
+                                    </span>
+                                ))}
+                            </p>
+                        </div>
+                    </div>
 
                 </div>
             </div>
 
+            {/* blocks section */}
 
+            <div className="lg:px-20 px-5 lg:py-20 py-6">
+                <div className='container mx-auto'>
+
+                    <div className='grid md:grid-cols-3 grid-cols-1 items-center justify-center gap-3 grid-rows-2'>
+                        <div className='col-span-2 rounded-2xl bg-[#131313] border border-blue-50 p-20'>
+
+                        </div>
+                        <div className='col-span-1 rounded-2xl bg-[#131313] border border-blue-50 p-20'>
+
+                        </div>
+                        <div className='col-span-1 rounded-2xl bg-[#131313] border border-blue-50 p-20'>
+
+                        </div>
+                        <div className='col-span-2 rounded-2xl bg-[#131313] border border-blue-50 p-20'>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {/* tabs section */}
+
+            <div className="lg:px-20 px-5 lg:py-20 py-6">
+                <div className='container mx-auto'>
+
+                    <Tabs />
+
+                    <div className='flex flex-wrap gap-6 items-center justify-center mx-auto'>
+                        <div className='lg:w-5/12'>
+
+                        </div>
+
+                        <div className='lg:w-6/12'>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* roadmap section */}
+
+            <div className="lg:px-20 px-5 lg:py-20 py-6">
+                <div className='container mx-auto'>
+                    <div className='flex flex-wrap md:gap-24 gap-12 items-center justify-center mx-auto'>
+                        <div className='flex items-center gap-4 lg:w-4/12'>
+                            <div className='w-0.5 bg-blue-50 h-96'>
+                            </div>
+
+                            <div className='relative z-20 -left-6 space-y-24'>
+                                <div className=''>
+                                    <div className='flex items-center gap-4'>
+                                        <span className='w-4 h-4 rounded-full bg-white-100'></span>
+                                        <p className='lg:text-lg'>Initial Contact<br></br>
+                                            – Fill out a short inquiry form</p>
+                                    </div>
+                                </div>
+
+                                <div className=''>
+                                    <div className='flex items-center gap-4'>
+                                        <span className='w-4 h-4 rounded-full bg-white-100'></span>
+                                        <p className='lg:text-lg'>
+                                            Discovery Call<br></br>
+                                            – Discuss goals & requirements
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className=''>
+                                    <div className='flex items-center gap-4'>
+                                        <span className='w-4 h-4 rounded-full bg-white-100'></span>
+                                        <p className='lg:text-lg'>
+                                            Strategy Proposal<br></br>
+                                            – Receive a tailored action plan
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='flex items-center gap-4 lg:w-4/12'>
+                            <div className='w-0.5 bg-blue-50 h-96'>
+                            </div>
+
+                            <div className='relative z-20 -left-6 space-y-24'>
+                                <div className=''>
+                                    <div className='flex items-center gap-4'>
+                                        <span className='w-4 h-4 rounded-full bg-white-100'></span>
+                                        <p className='lg:text-lg'>
+                                            Onboarding & Setup <br></br>
+                                            – Align tools & expectations
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className=''>
+                                    <div className='flex items-center gap-4'>
+                                        <span className='w-4 h-4 rounded-full bg-white-100'></span>
+                                        <p className='lg:text-lg'>
+                                            Execution & Growth <br></br>
+                                            – Start marketing & development
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className=''>
+                                    <div className='flex items-center gap-4'>
+                                        <span className='w-4 h-4 rounded-full bg-white-100'></span>
+                                        <p className='lg:text-lg'>
+                                            Optimization & Scale <br></br>
+                                            – Refine & expand strategies
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* text section */}
+
+            <div className="lg:px-20 px-5 lg:pb-36 py-6">
+                <div className='container mx-auto text-center space-y-8'>
+
+                    <div className='text-center md:text-4xl text-2xl font-bold'>
+                        <span className='text-blue-50'>Share your marketing challenge</span>, and we'll craft
+                        <p> a tailored solution for your Web3 brand.</p>
+                    </div>
+
+                    <div className='md:text-2xl text-lg lg:leading-relaxed '>
+                        <p>Choose Onchain3 as your Web3 marketing partner to drive</p>
+                        <p>growth in the blockchain and crypto space.</p>
+                        <p>Click "Get a proposal" to start today.</p>
+                    </div>
+
+                    <button className="bg-blue-50 rounded-lg py-2 lg:px-8 px-4 font-semibold text-black-100">
+                        Get A Free Proposal
+                    </button>
+                </div>
+            </div>
 
             {/* Frequently Asked Questions section */}
 
@@ -145,7 +351,7 @@ export default function Home() {
                         </p>
                     </div>
 
-                    <div className='lg:flex items-start justify-between gap-8 lg:mt-24 mt-12 lg:space-y-0 space-y-8'>
+                    <div className='lg:flex items-start justify-between gap-8 lg:mt-28 mt-12 lg:space-y-0 space-y-8'>
 
                         <div className='lg:w-4/12 w-full'>
                             <img src={faq} alt=''></img>
