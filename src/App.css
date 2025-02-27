@@ -105,20 +105,111 @@
 
   border: solid 1px #FFFFFF29;
   border-radius: 1em;
-  --gradient-border: conic-gradient(from var(--border-angle), transparent 35%, #2AF4FF, #070707 99%, transparent);
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 65%, #2AF4FF, #070707 99%, transparent);
   background:
     var(--main-bg) padding-box,
     var(--gradient-border) border-box,
     var(--main-bg) border-box;
 
   background-position: center center;
-  animation: bg-spin 5s linear infinite;
+  animation: bg-spin 4s linear infinite;
+}
+
+.animate-border1 {
+  color: white;
+  text-shadow: 0 1px 0 #000;
+
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(from var(--border-angle),
+      #010101,
+      #010101 5%,
+      #010101 60%,
+      #010101 95%);
+
+  border: solid 1px #FFFFFF29;
+  border-radius: 1em;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 65%, #2AF4FF, #070707 99%, transparent);
+  background:
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+  background-position: center center;
+  animation: bg-spin 4s linear infinite;
   animation-delay: 3s;
+}
+
+.animate-border1 {
+  color: white;
+  text-shadow: 0 1px 0 #000;
+
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(from var(--border-angle),
+      #010101,
+      #010101 5%,
+      #010101 60%,
+      #010101 95%);
+
+  border: solid 1px #FFFFFF29;
+  border-radius: 1em;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 65%, #2AF4FF, #070707 99%, transparent);
+  background:
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+  background-position: center center;
+  animation: bg-spin 4s linear infinite;
+  animation-delay: 3s;
+}
+
+.animate-border2 {
+  color: white;
+  text-shadow: 0 1px 0 #000;
+
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(from var(--border-angle),
+      #010101,
+      #010101 5%,
+      #010101 60%,
+      #010101 95%);
+
+  border: solid 1px #FFFFFF29;
+  border-radius: 1em;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 65%, #2AF4FF, #070707 99%, transparent);
+  background:
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+  background-position: center center;
+  animation: bg-spin 4s linear infinite;
+  animation-delay: 6s;
+}
+
+.animate-border3 {
+  color: white;
+  text-shadow: 0 1px 0 #000;
+
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(from var(--border-angle),
+      #010101,
+      #010101 5%,
+      #010101 60%,
+      #010101 95%);
+
+  border: solid 1px #FFFFFF29;
+  border-radius: 1em;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 65%, #2AF4FF, #070707 99%, transparent);
+  background:
+    var(--main-bg) padding-box,
+    var(--gradient-border) border-box,
+    var(--main-bg) border-box;
+  background-position: center center;
+  animation: bg-spin 4s linear infinite;
+  animation-delay: 8s;
 }
 
 @keyframes bg-spin {
   to {
-    --border-angle: -0.8turn;
+    --border-angle: -1turn;
   }
 }
 

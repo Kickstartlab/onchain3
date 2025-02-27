@@ -80,7 +80,7 @@ const VerticalTabs = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -30 }}
                     transition={{ duration: 0.5 }}
-                    className="p-6 border border-[#2AF4FF] rounded-xl w-full bg-[#0B0B0B]">
+                    className="p-5 border border-[#2AF4FF] rounded-xl w-full bg-[#0B0B0B]">
 
                     <img
                         src={tabs.find((tab) => tab.id === activeTab)?.image}
