@@ -11,63 +11,10 @@ import 'aos/dist/aos.css';
 import FloatingText from './FloatingText';
 import Accordion from './Accordion';
 import Tabs from './Tabs';
+import AnimatedParagraph from './AnimatedParagraph';
 
 
 export default function Home() {
-
-    const paragraph =
-        "Onchain3 was founded by Web3 marketing experts with years of hands-on experience. From the start, we’ve focused on delivering results, not just buzz. With a track record of successfully promoting over 50 Web3 projects, we’ve learned exactly what works—and what doesn’t. We’re here to help Web3 projects grow, thrive, and reach the right audience, with proven strategies that deliver real impact.";
-
-    const words = paragraph.split(" ");
-    const sectionRef = useRef(null);
-    const [scrollProgress, setScrollProgress] = useState(0);
-    const [isInView, setIsInView] = useState(false);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsInView(entry.isIntersecting);
-            },
-            { threshold: 0.1 } // Trigger when 10% of the section is visible
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => {
-            if (sectionRef.current) {
-                observer.unobserve(sectionRef.current);
-            }
-        };
-    }, []);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (!sectionRef.current) return;
-
-            const rect = sectionRef.current.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            if (rect.top < windowHeight && rect.bottom > 0) {
-                const progress = 1 - Math.max(0, rect.top / windowHeight);
-                setScrollProgress(progress);
-            }
-        };
-
-        if (isInView) {
-            window.addEventListener("scroll", handleScroll);
-            handleScroll(); // Initial check in case already in view
-        } else {
-            setScrollProgress(0); // Reset if out of view
-        }
-
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [isInView]);
-
-    const getColor = (index) => {
-        const opacity = Math.min(1, 0.38 + (scrollProgress * index) / words.length);
-        return `rgba(255, 255, 255, ${opacity})`;
-    };
 
     return (
         <div className="bg-black-50 font-montserat overflow-hidden text-white-100 m-0">
@@ -167,26 +114,13 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="lg:px-20 px-5 lg:py-20 py-6">
+            {/* animate text section */}
+
+            <div className="lg:px-20 px-5 lg:my-20 my-6">
                 <div className='container mx-auto'>
 
-                    <div className="bg-black flex items-center justify-center">
-                        <div ref={sectionRef} className="p-6 max-w-3xl text-3xl font-bold">
-                            <p className="text-lg font-medium flex flex-wrap leading-relaxed sticky top-16">
-                                {words.map((word, index) => (
-                                    <span
-                                        key={index}
-                                        style={{
-                                            color: getColor(index),
-                                            transition: "color 0.5s ease-in-out",
-                                        }}
-                                        className="mr-1"
-                                    >
-                                        {word}
-                                    </span>
-                                ))}
-                            </p>
-                        </div>
+                    <div className=''>
+                        <AnimatedParagraph />
                     </div>
 
                 </div>
@@ -351,7 +285,7 @@ export default function Home() {
                         </p>
                     </div>
 
-                    <div className='lg:flex items-start justify-between gap-8 lg:mt-28 mt-12 lg:space-y-0 space-y-8'>
+                    <div className='lg:flex items-center justify-between gap-8 lg:mt-28 mt-12 lg:space-y-0 space-y-8 faq glow glowDimmed'>
 
                         <div className='lg:w-4/12 w-full'>
                             <img src={faq} alt=''></img>

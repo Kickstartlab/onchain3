@@ -44,31 +44,23 @@ export default function Accordion() {
       {faqs.map((faq, index) => (
         <div
           key={faq.id}
-          className={`border border-[#CDFEE6CC] rounded-lg text-white relative ${
-            openItems[index] ? "open" : ""
-          }`}
-        >
-          <button
-            className="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold relative"
-            onClick={() => toggleAccordion(index)}
-          >
-            <span className="flex items-center space-x-2">
-              <span className="text-cyan-400 text-xl font-mono">
+          className={`border border-[#CDFEE6CC] rounded-lg ${ openItems[index] ? "open" : "clip-path"}`}>
+          <div
+            className="w-full flex justify-between items-center px-6 py-4 text-lg font-semibold relative">
+            <span className="flex items-center space-x-5">
+              <span className="font-bruno">
                 {faq.id.toString().padStart(2, "0")}
               </span>
               <span>{faq.question}</span>
             </span>
 
-            {/* Right Side Triangular Toggle Button */}
-            <div className="absolute right-0 top-0 h-full flex items-center">
+            <div onClick={() => toggleAccordion(index)} className={`absolute right-0 top-0 flex items-center cursor-pointer ${openItems[index] ? "translate-x-3.5" : "translate-x-0"}`}>
               <div className={`triangle ${openItems[index] ? "open" : ""}`}></div>
             </div>
-          </button>
+          </div>
 
           <div
-            className={`overflow-hidden transition-all duration-300 ${
-              openItems[index] ? "max-h-40 py-2 px-6" : "max-h-0"
-            }`}
+            className={`overflow-hidden transition-all duration-300 ${openItems[index] ? "max-h-40 py-2 px-6" : "max-h-0"}`}
           >
             <p className="text-gray-300">{faq.answer}</p>
           </div>
