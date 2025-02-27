@@ -34,7 +34,7 @@ export default function Home() {
                         <div data-aos='fade-right' className='lg:w-7/12'>
                             <div className='md:space-y-8 space-y-3 '>
                                 <p className='md:text-2xl text-lg font-semibold'>Onchain 3 Transforming</p>
-                                <h1 className='lg:text-8xl text-5xl font-extrabold'>
+                                <h1 className='lg:text-8xl text-[42px] font-extrabold'>
                                     <span className='text-blue-50'>Visions</span> into
                                 </h1>
                                 <p className='md:text-3xl text-xl font-bold'>Digital Reality</p>
@@ -222,10 +222,10 @@ export default function Home() {
                 <div className='container mx-auto'>
                     <div className='flex flex-wrap md:gap-24 gap-12 items-center justify-center mx-auto'>
                         <div  data-aos='fade-right' className='flex items-center gap-4 lg:w-4/12'>
-                            <div className='w-0.5 bg-blue-50 h-96'>
+                            <div className='w-0.5 bg-blue-50 md:h-96 h-72'>
                             </div>
 
-                            <div className='relative z-20 -left-6 space-y-24'>
+                            <div className='relative z-20 -left-6 md:space-y-24 space-y-12'>
                                 <div className=''>
                                     <div className='flex items-center gap-4'>
                                         <span className='w-4 h-4 rounded-full bg-white-100'></span>
@@ -257,10 +257,10 @@ export default function Home() {
                         </div>
 
                         <div  data-aos='fade-left' className='flex items-center gap-4 lg:w-4/12'>
-                            <div className='w-0.5 bg-blue-50 h-96'>
+                            <div className='w-0.5 bg-blue-50 md:h-96 h-72'>
                             </div>
 
-                            <div className='relative z-20 -left-6 space-y-24'>
+                            <div className='relative z-20 -left-6 md:space-y-24 space-y-12'>
                                 <div className=''>
                                     <div className='flex items-center gap-4'>
                                         <span className='w-4 h-4 rounded-full bg-white-100'></span>
@@ -362,11 +362,11 @@ export default function Home() {
                             </svg>
 
 
-                            <svg data-aos='fade-down' data-aos-delay='50' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" className="size-3 md:hidden block">
+                            <svg data-aos='fade-down' data-aos-delay='50' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-12 flex mx-auto md:hidden">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
                             </svg>
 
-                            <div data-aos='fade-in' data-aos-delay='300' className='bg-white-100 border border-blue-50 rounded-3xl text-black-100 md:text-4xl text-2xl md:w-44 text-center p-5'>
+                            <div data-aos='fade-in' data-aos-delay='300' className='bg-white-100 border border-blue-50 rounded-3xl text-black-100 md:text-4xl text-xl md:w-44 text-center p-5'>
                                 Your Project
                             </div>
                         </div>

@@ -87,7 +87,7 @@ const VerticalTabs = () => {
                         alt="Tab Image"
                         className="mb-5 flex mx-auto"
                     />
-                    <h2 className="text-2xl font-bold mb-5">
+                    <h2 className="md:text-2xl text-xl font-bold mb-5">
                         {tabs.find((tab) => tab.id === activeTab)?.title}
                     </h2>
 
