@@ -6,6 +6,8 @@ import tab_3 from '../assets/tab_3.png'
 import tab_4 from '../assets/tab_4.png'
 import tab_5 from '../assets/tab_5.png'
 import tab_6 from '../assets/tab_6.png'
+import tab_7 from '../assets/tab_7.png'
+
 
 
 const tabs = [
@@ -13,43 +15,43 @@ const tabs = [
         id: "smm",
         title: "SMM",
         content: "Lorem Ipsum dollar here bank gone through Lorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone through",
-        image: '../assets/tab_1.png',
+        image: tab_1,
     },
     {
         id: "community",
         title: "Community Management",
         content: "Lorem Ipsum dollar here bank gone through Lorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone through",
-        image: '../assets/tab_2.png',
+        image: tab_2,
     },
     {
         id: "ppc",
         title: "PPC",
         content: "Lorem Ipsum dollar here bank gone through Lorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone through",
-        image: "'../assets/tab_1.png",
+        image: tab_3,
     },
     {
         id: "seo",
         title: "SEO",
         content: "Lorem Ipsum dollar here bank gone through Lorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone through",
-        image: "'../assets/tab_1.png",
+        image: tab_4,
     },
     {
         id: "influencer",
         title: "Influencer Marketing",
         content: "Lorem Ipsum dollar here bank gone through Lorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone through",
-        image: "/images/influencer.png",
+        image: tab_5,
     },
     {
         id: "pr",
         title: "PR",
         content: "Lorem Ipsum dollar here bank gone through Lorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone through",
-        image: "/images/pr.png",
+        image: tab_6,
     },
     {
         id: "web3",
         title: "Web3 & Blockchain Development",
         content: "Lorem Ipsum dollar here bank gone through Lorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone through",
-        image: "",
+        image: tab_7,
     }
 ];
 
@@ -79,12 +81,12 @@ const VerticalTabs = () => {
                     exit={{ opacity: 0, y: -30 }}
                     transition={{ duration: 0.5 }}
                     className="p-6 border border-[#2AF4FF] rounded-xl w-full bg-[#0B0B0B]">
-                   
-                    <img key={tabs.find((tab) => tab.id === activeTab)?.image}
+
+                    <img
                         src={tabs.find((tab) => tab.id === activeTab)?.image}
                         alt="Tab Image"
-                        className="mb-5"/>
-
+                        className="mb-5 flex mx-auto"
+                    />
                     <h2 className="text-2xl font-bold mb-5">
                         {tabs.find((tab) => tab.id === activeTab)?.title}
                     </h2>
