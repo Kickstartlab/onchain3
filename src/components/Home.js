@@ -25,7 +25,7 @@ export default function Home() {
 
             <span className='md:w-[800px] w-52 md:h-[500px] h-52 bg-blue-50 absolute left-0 top-0 blur-3xl opacity-10 rounded-b-full'>
             </span>
-            <div className="lg:px-20 px-5 relative z-20">
+            <div className="lg:px-20 px-5 relative z-20 lg:h-screen">
                 <div className='container mx-auto'>
 
                     <Menu />
@@ -215,7 +215,7 @@ export default function Home() {
 
             <div className="lg:px-20 px-5 lg:py-0 py-6 relative z-20">
                 <div className='container mx-auto'>
-                    <div className='flex flex-wrap md:gap-28 gap-y-8 items-center justify-center mx-auto lg:min-h-[80vh]'>
+                    <div className='flex flex-wrap md:gap-28 gap-y-8 items-center justify-center mx-auto lg:min-h-[78vh]'>
                         <div data-aos='fade-right' className='flex items-center'>
                             <div className='w-0.5 bg-blue-50 md:h-96 h-72'>
                             </div>
@@ -293,8 +293,8 @@ export default function Home() {
 
             {/* text section */}
 
-            <div className="lg:px-20 px-5 lg:pb-36 py-6 relative z-20 lg:min-h-screen flex flex-col justify-center">
-                <div className='container mx-auto text-center space-y-8'>
+            <div className="lg:px-20 px-5 relative z-20 md:min-h-[90vh] min-h-screen flex flex-col justify-center">
+                <div className='container mx-auto text-center space-y-12'>
 
                     <div data-aos='fade-in' className='text-center md:text-4xl text-2xl font-bold'>
                         <span className='text-blue-50'>Share your marketing challenge</span>, and we'll craft
@@ -345,9 +345,9 @@ export default function Home() {
 
             {/* Get In Touch With Us section */}
 
-            <div id='getintouch' className="lg:px-20 px-5 lg:py-32 py-8 relative z-20">
+            <div id='getintouch' className="lg:px-20 px-5 relative z-20">
                 <div className='container mx-auto'>
-                    <div className='flex flex-col items-center justify-center gap-12 lg:w-6/12 mx-auto lg:min-h-[80vh]'>
+                    <div className='flex flex-col items-center justify-center gap-12 lg:w-6/12 mx-auto lg:min-h-[85h] min-h-screen'>
 
                         <div className='md:flex items-center justify-center gap-6 text-center md:space-y-0 space-y-4'>
                             <p data-aos='fade-in' className='font-extrabold lg:text-8xl text-4xl px-2 bg-blue-50 text-black-100 rounded-2xl'>03</p>

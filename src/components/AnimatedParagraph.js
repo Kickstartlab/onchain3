@@ -38,7 +38,7 @@ const AnimatedText = () => {
     }, []);
 
     return (
-        <div className="md:h-screen flex flex-col justify-center items-center">
+        <div className="md:h-[85vh] flex flex-col justify-center items-center">
             <p ref={el => textRefs.current[0] = el} className="md:text-[2.5rem] text-xl lg:leading-snug font-bold">
                 Onchain3 was founded by Web3 marketing experts with years of hands-on experience. From the start, we’ve focused on delivering results, not just buzz. With a track record of successfully promoting over 50 Web3 projects, we’ve learned exactly what works—and what doesn’t. We’re here to help Web3 projects grow, thrive, and reach the right audience, with proven strategies that deliver real impact.
             </p>
