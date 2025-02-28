@@ -79,13 +79,15 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div className='flex flex-wrap md:justify-center justify-around items-center lg:gap-24 gap-12 pb-6'>
-                        <div className='lg:w-44 w-full lg:text-left text-center'>
-                            WORKED WITH
-                            GLOBAL LARGEST
-                            BRANDS
-                        </div>
+            {/* about us section */}
+
+            <div id='about' className="lg:px-20 px-5 py-6 relative z-20">
+                <div className='container mx-auto'>
+
+                    <div className='flex md:justify-center justify-around items-center lg:gap-24 gap-6'>
                         <div>
                             <img src={brand_1} alt='brand'></img>
                         </div>
@@ -99,22 +101,15 @@ export default function Home() {
                             <img src={brand_4} alt='brand'></img>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            {/* about us section */}
-
-            <div id='about' className="lg:px-20 px-5 lg:py-20 py-6 lg:h-screen relative z-20">
-                <div className='container mx-auto'>
-
-                    <div className='text-center justify-center md:text-3xl font-bold lg:leading-relaxed'>
+                    <div className='text-center justify-center md:text-3xl font-bold lg:leading-relaxed lg:mt-12 mt-8'>
                         <p>  Years of Web3 Expertise, Refining Strategies, <span className='text-blue-50'>Learning from</span></p>
                         <p><span className='text-blue-50'>Mistakes</span>, and Delivering Proven Marketing Results.</p>
                     </div>
 
                     <div className='grid lg:grid-cols-4 grid-cols-2 items-start justify-center gap-5 lg:mt-24 mt-12 lg:mx-24'>
 
-                        <div  data-aos='fade-up' className='md:space-y-12 space-y-6'>
+                        <div data-aos='fade-up' className='md:space-y-12 space-y-6'>
                             <div className='md:w-44 w-24 md:h-44 h-24 flex items-center justify-center rounded-full border border-blue-50 mx-auto'>
                                 <p className='font-bold lg:text-7xl md:text-5xl text-4xl'>+7</p>
                             </div>
@@ -122,7 +117,7 @@ export default function Home() {
                             <p className='lg:text-xl text-center font-medium'>years in the market</p>
                         </div>
 
-                        <div  data-aos='fade-up' data-aos-delay='50' className='md:space-y-12 space-y-6'>
+                        <div data-aos='fade-up' data-aos-delay='50' className='md:space-y-12 space-y-6'>
                             <div className='md:w-44 w-24 md:h-44 h-24 flex items-center justify-center rounded-full border border-blue-50 mx-auto'>
                                 <p className='font-bold md:text-4xl text-2xl'>$10M</p>
                             </div>
@@ -130,7 +125,7 @@ export default function Home() {
                             <p className='lg:text-xl text-center font-medium'>Marketing Budget Invested</p>
                         </div>
 
-                        <div  data-aos='fade-up' data-aos-delay='100' className='md:space-y-12 space-y-6'>
+                        <div data-aos='fade-up' data-aos-delay='100' className='md:space-y-12 space-y-6'>
                             <div className='md:w-44 w-24 md:h-44 h-24 flex items-center justify-center rounded-full border border-blue-50 mx-auto'>
                                 <p className='font-bold md:text-4xl text-2xl'>100+</p>
                             </div>
@@ -138,7 +133,7 @@ export default function Home() {
                             <p className='lg:text-xl text-center font-medium'>Happy Clients</p>
                         </div>
 
-                        <div  data-aos='fade-up' data-aos-delay='150' className='md:space-y-12 space-y-6'>
+                        <div data-aos='fade-up' data-aos-delay='150' className='md:space-y-12 space-y-6'>
                             <div className='md:w-44 w-24 md:h-44 h-24 flex items-center justify-center rounded-full border border-blue-50 mx-auto'>
                                 <p className='font-bold md:text-4xl text-2xl'>30</p>
                             </div>
@@ -152,7 +147,7 @@ export default function Home() {
 
             {/* animate text section */}
 
-            <div className="lg:px-20 px-5 lg:my-20 my-6 relative z-20">
+            <div className="lg:px-20 px-5 relative z-20 py-12">
                 <div className='container mx-auto'>
 
                     <div className=''>
@@ -167,7 +162,7 @@ export default function Home() {
             <div className="lg:px-20 px-5 lg:py-20 py-6 relative z-20">
                 <div className='container mx-auto'>
 
-                    <div className='grid md:grid-cols-3 grid-cols-1 items-center justify-center gap-3 lg:w-11/12 mx-auto'>
+                    <div className='grid md:grid-cols-3 grid-cols-1 items-center justify-center md:gap-x-3 gap-y-3 lg:w-11/12 mx-auto'>
                         <div className='col-span-1 rounded-2xl bg-[#131313] border border-blue-50 md:p-12 p-6 text-center flex flex-col justify-end lg:h-72'>
                             <h3 className='text-xl font-semibold'>Fast turnarounds</h3>
                             <p>Receive lightning-fast delivery of your
@@ -199,7 +194,7 @@ export default function Home() {
             <span className='md:w-[500px] w-44 md:h-[450px] h-48 bg-blue-50 absolute right-0 lg:mr-20 blur-[70px] opacity-20 mt-40 rounded-full'>
             </span>
 
-            <div className="lg:px-20 px-5 lg:py-20 py-10 relative z-20">
+            <div className="lg:px-20 px-5 lg:py-0 py-10 relative z-20 lg:min-h-screen flex flex-col items-center justify-center">
                 <div className='container mx-auto'>
 
                     <Tabs />
@@ -218,14 +213,14 @@ export default function Home() {
 
             {/* roadmap section */}
 
-            <div className="lg:px-20 px-5 lg:py-20 py-6 relative z-20">
+            <div className="lg:px-20 px-5 lg:py-0 py-6 relative z-20">
                 <div className='container mx-auto'>
-                    <div className='flex flex-wrap md:gap-24 gap-12 items-center justify-center mx-auto'>
-                        <div  data-aos='fade-right' className='flex items-center gap-4 lg:w-4/12'>
+                    <div className='flex flex-wrap md:gap-28 gap-y-8 items-center justify-center mx-auto lg:min-h-[80vh]'>
+                        <div data-aos='fade-right' className='flex items-center'>
                             <div className='w-0.5 bg-blue-50 md:h-96 h-72'>
                             </div>
 
-                            <div className='relative z-20 -left-6 md:space-y-24 space-y-12'>
+                            <div className='relative z-20 -left-2.5 md:space-y-24 space-y-12'>
                                 <div className=''>
                                     <div className='flex items-center gap-4'>
                                         <span className='w-4 h-4 rounded-full bg-white-100'></span>
@@ -256,11 +251,11 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div  data-aos='fade-left' className='flex items-center gap-4 lg:w-4/12'>
+                        <div data-aos='fade-left' className='flex items-center'>
                             <div className='w-0.5 bg-blue-50 md:h-96 h-72'>
                             </div>
 
-                            <div className='relative z-20 -left-6 md:space-y-24 space-y-12'>
+                            <div className='relative z-20 -left-2.5 md:space-y-24 space-y-12'>
                                 <div className=''>
                                     <div className='flex items-center gap-4'>
                                         <span className='w-4 h-4 rounded-full bg-white-100'></span>
@@ -298,15 +293,15 @@ export default function Home() {
 
             {/* text section */}
 
-            <div className="lg:px-20 px-5 lg:pb-36 py-6 relative z-20">
+            <div className="lg:px-20 px-5 lg:pb-36 py-6 relative z-20 lg:min-h-screen flex flex-col justify-center">
                 <div className='container mx-auto text-center space-y-8'>
 
-                    <div  data-aos='fade-in' className='text-center md:text-4xl text-2xl font-bold'>
+                    <div data-aos='fade-in' className='text-center md:text-4xl text-2xl font-bold'>
                         <span className='text-blue-50'>Share your marketing challenge</span>, and we'll craft
                         <p> a tailored solution for your Web3 brand.</p>
                     </div>
 
-                    <div  data-aos='fade-in' className='md:text-2xl text-lg lg:leading-relaxed '>
+                    <div data-aos='fade-in' className='md:text-2xl lg:leading-relaxed '>
                         <p>Choose Onchain3 as your Web3 marketing partner to drive</p>
                         <p>growth in the blockchain and crypto space.</p>
                         <p>Click "Get a proposal" to start today.</p>
@@ -322,7 +317,7 @@ export default function Home() {
 
             <span className='md:w-[354px] w-48 md:h-[354px] h-48 bg-blue-50 absolute right-0 left-1/3 blur-3xl opacity-20 lg:mt-48 mt-12 rounded-full'>
             </span>
-            <div id='faq' className="lg:px-20 px-5 relative z-20">
+            <div id='faq' className="lg:px-20 px-5 py-6 relative z-20">
                 <div className='container mx-auto'>
 
                     <div className='space-y-4 text-center lg:mb-12 mb-8'>
@@ -352,7 +347,7 @@ export default function Home() {
 
             <div id='getintouch' className="lg:px-20 px-5 lg:py-32 py-8 relative z-20">
                 <div className='container mx-auto'>
-                    <div className='flex flex-col items-center justify-center gap-8 lg:w-6/12 mx-auto'>
+                    <div className='flex flex-col items-center justify-center gap-12 lg:w-6/12 mx-auto lg:min-h-[80vh]'>
 
                         <div className='md:flex items-center justify-center gap-6 text-center md:space-y-0 space-y-4'>
                             <p data-aos='fade-in' className='font-extrabold lg:text-8xl text-4xl px-2 bg-blue-50 text-black-100 rounded-2xl'>03</p>

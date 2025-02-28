@@ -8,14 +8,14 @@ import footer from '../assets/footer.png';
 
 export default function Footer() {
   return (
-    <div className="m-0">
-      <span className='md:w-[456px] w-48 md:h-[456px] h-48 bg-blue-50 absolute left-0 blur-[120px] opacity-20 mt-40 rounded-tr-full'>
+    <div className="bg-black-50 container mx-auto">
+      <span className='md:w-[456px] w-48 md:h-[446px] h-48 bg-blue-50 absolute left-0 blur-[120px] opacity-20 rounded-tr-full'>
       </span>
-      <footer className='text-white-100 lg:pl-20 m-0 relative z-20'>
+      <footer className='lg:pl-20 relative z-20'>
 
         <div className="lg:flex block justify-between items-center gap-x-4 lg:pt-12">
 
-          <div className='lg:w-3/12 w-full flex items-start gap-x-6 lg:p-0 p-5'>
+          <div className='lg:w-3/12 w-full flex items-start gap-x-6 py-6 lg:px-0 px-5'>
             <div className='space-y-8'>
               <a href="/" className="">
                 <div className='flex items-center gap-x-2 text-2xl'>
@@ -54,8 +54,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className='lg:w-9/12'>
-            <img data-aos='fade-up' src={footer} alt='' className='relative right-0'></img>
+          <div className='lg:w-8/12 lg:absolute relative right-0 bottom-0'>
+            <img data-aos='fade-up' src={footer} alt='' className=''></img>
           </div>
 
         </div>

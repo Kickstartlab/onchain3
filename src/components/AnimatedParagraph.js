@@ -1,56 +1,49 @@
-import React, { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const AnimatedParagraph = () => {
-    const controls = useAnimation();
-    const [isVisible, setIsVisible] = useState(false);
+gsap.registerPlugin(ScrollTrigger);
+
+const AnimatedText = () => {
+    const textRefs = useRef([]);
 
     useEffect(() => {
-        const handleScroll = () => {
-            const section = document.getElementById("animated-text");
-            if (section) {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.75) {
-                    setIsVisible(true);
-                }
-            }
-        };
+        if (!textRefs.current.length) return;
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: textRefs.current[0],
+                start: "top 50%",
+                end: "bottom 30%",
+                scrub: true,
+            }
+        });
+
+        textRefs.current.forEach(textElement => {
+            let combinedText = textElement.textContent.trim();
+            let words = combinedText.split(" ").map((word, index) => (
+                `<span key=${index} style="display: inline-block;">${word}</span>`
+            )).join(" ");
+
+            textElement.innerHTML = words;
+            const wordSpans = textElement.querySelectorAll("span");
+
+            tl.from(wordSpans, {
+                opacity: 0.3,
+                color: "#fff",
+                stagger: 15,  
+                duration: 30 
+            }, "+=0.5");
+        });
     }, []);
 
-    useEffect(() => {
-        if (isVisible) {
-            controls.start("visible");
-        }
-    }, [isVisible, controls]);
-
-    const text =
-        "Onchain3 was founded by Web3 marketing experts with years of hands-on experience. From the start, we’ve focused on delivering results, not just buzz. With a track record of successfully promoting over 50 Web3 projects, we’ve learned exactly what works—and what doesn’t. We’re here to help Web3 projects grow, thrive, and reach the right audience, with proven strategies that deliver real impact.";
-    const words = text.split(" ");
-
     return (
-        <div className="">
-            <p id="animated-text" className="md:text-4xl text-xl font-bold">
-                {words.map((word, index) => (
-                    <motion.span
-                        key={index}
-                        initial={{ opacity: 0.5, color: "#FFFFFF61" }} 
-                        animate={controls}
-                        variants={{
-                            visible: { opacity: 1, color: "#FFFFFF" }, 
-                        }}
-                        transition={{ duration: 0.2, delay: index * 0.1 }}
-                        className="inline-block mx-1"
-                    >
-                        {word}
-                    </motion.span>
-                ))}
+        <div className="md:h-screen flex flex-col justify-center items-center">
+            <p ref={el => textRefs.current[0] = el} className="md:text-[2.5rem] text-xl lg:leading-snug font-bold">
+                Onchain3 was founded by Web3 marketing experts with years of hands-on experience. From the start, we’ve focused on delivering results, not just buzz. With a track record of successfully promoting over 50 Web3 projects, we’ve learned exactly what works—and what doesn’t. We’re here to help Web3 projects grow, thrive, and reach the right audience, with proven strategies that deliver real impact.
             </p>
         </div>
     );
 };
 
-
-export default AnimatedParagraph;
+export default AnimatedText;
