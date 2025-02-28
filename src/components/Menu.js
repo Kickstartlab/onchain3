@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 export default function Menu() {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -6,18 +6,6 @@ export default function Menu() {
   const ToggleSidebar = () => {
     setIsOpen(!isOpen);
   }
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isOpen && !event.target.closest(".sidebar") && !event.target.closest(".nav")) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener("click", handleClickOutside);
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [isOpen]);
 
   return (
 

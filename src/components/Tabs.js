@@ -82,11 +82,7 @@ const VerticalTabs = () => {
                     transition={{ duration: 0.5 }}
                     className="p-5 border border-[#2AF4FF] rounded-xl w-full bg-[#0B0B0B]">
 
-                    <img
-                        src={tabs.find((tab) => tab.id === activeTab)?.image}
-                        alt="Tab Image"
-                        className="mb-5 flex mx-auto"
-                    />
+                    <img src={tabs.find((tab) => tab.id === activeTab)?.image} alt="Tab" className="mb-5 flex mx-auto"/>
                     <h2 className="md:text-2xl text-xl font-bold mb-5">
                         {tabs.find((tab) => tab.id === activeTab)?.title}
                     </h2>
