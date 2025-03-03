@@ -53,7 +53,7 @@ const VerticalTabs = () => {
 
             <motion.div
                 ref={carouselRef}
-                className="flex lg:hidden overflow-x-auto no-scrollbar snap-x snap-mandatory w-full"
+                className="flex lg:hidden overflow-x-auto snap-x snap-mandatory w-full"
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
             >
