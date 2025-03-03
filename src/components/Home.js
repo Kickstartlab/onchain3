@@ -87,7 +87,7 @@ export default function Home() {
             <div id='about' className="lg:px-20 px-5 py-6 relative z-20">
                 <div className='container mx-auto'>
 
-                    <div className='flex md:justify-center justify-around items-center lg:gap-24 gap-6'>
+                    <div className='flex md:justify-center justify-around items-center lg:gap-24 gap-12 '>
                         <div>
                             <img src={brand_1} alt='brand'></img>
                         </div>
@@ -102,7 +102,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className='text-center justify-center md:text-3xl font-bold lg:leading-relaxed lg:mt-12 mt-8'>
+                    <div className='text-center justify-center md:text-3xl font-bold lg:leading-relaxed lg:mt-12 mt-10'>
                         <p>  Years of Web3 Expertise, Refining Strategies, <span className='text-blue-50'>Learning from</span></p>
                         <p><span className='text-blue-50'>Mistakes</span>, and Delivering Proven Marketing Results.</p>
                     </div>
@@ -162,7 +162,7 @@ export default function Home() {
             <div className="lg:px-20 px-5 lg:py-20 py-6 relative z-20">
                 <div className='container mx-auto'>
 
-                    <div className='grid md:grid-cols-3 grid-cols-1 items-center justify-center md:gap-x-3 gap-y-3 lg:w-11/12 mx-auto'>
+                    <div className='grid md:grid-cols-3 grid-cols-1 justify-center md:gap-x-3 gap-y-3 lg:w-11/12 mx-auto'>
                         <div className='col-span-1 rounded-2xl bg-[#131313] border border-blue-50 md:p-12 p-6 text-center flex flex-col justify-end lg:h-72'>
                             <h3 className='text-xl font-semibold'>Fast turnarounds</h3>
                             <p>Receive lightning-fast delivery of your
