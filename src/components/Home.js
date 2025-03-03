@@ -215,7 +215,7 @@ export default function Home() {
 
             <div className="lg:px-20 px-5 lg:py-0 py-6 relative z-20">
                 <div className='container mx-auto'>
-                    <div className='flex flex-wrap md:gap-28 gap-y-8 items-center justify-center mx-auto lg:min-h-[78vh]'>
+                    <div className='flex flex-wrap md:gap-28 gap-8 items-center justify-center mx-auto lg:min-h-[78vh]'>
                         <div data-aos='fade-right' className='flex items-center'>
                             <div className='w-0.5 bg-blue-50 md:h-96 h-72'>
                             </div>
@@ -330,10 +330,10 @@ export default function Home() {
                         </p>
                     </div>
 
-                    <div className='lg:flex items-center justify-between gap-8 lg:mt-28 mt-12 lg:space-y-0 space-y-8 faq glow glowDimmed'>
+                    <div className='lg:flex items-center justify-between gap-8 lg:mt-28 mt-12 lg:space-y-0 space-y-12 faq glow glowDimmed'>
 
                         <div data-aos='zoom-in' className='lg:w-4/12 w-full'>
-                            <img src={faq} alt=''></img>
+                            <img src={faq} alt='' className='flex  mx-auto'></img>
                         </div>
 
                         <div data-aos='fade-left' className='lg:w-7/12 w-full'>
@@ -350,7 +350,7 @@ export default function Home() {
                     <div className='flex flex-col items-center justify-center gap-12 lg:w-6/12 mx-auto lg:min-h-[85h] min-h-screen'>
 
                         <div className='md:flex items-center justify-center gap-6 text-center md:space-y-0 space-y-4'>
-                            <p data-aos='fade-in' className='font-extrabold lg:text-8xl text-4xl px-2 bg-blue-50 text-black-100 rounded-2xl'>03</p>
+                            <p data-aos='fade-in' className='font-extrabold md:text-8xl text-4xl px-2 bg-blue-50 text-black-100 rounded-2xl'>03</p>
 
                             <svg data-aos='slide-right' data-aos-delay='50' className='md:block hidden' width="239" height="16" viewBox="0 0 249 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M248.707 8.70711C249.098 8.31658 249.098 7.68342 248.707 7.29289L242.343 0.928932C241.953 0.538408 241.319 0.538408 240.929 0.928932C240.538 1.31946 240.538 1.95262 240.929 2.34315L246.586 8L240.929 13.6569C240.538 14.0474 240.538 14.6805 240.929 15.0711C241.319 15.4616 241.953 15.4616 242.343 15.0711L248.707 8.70711ZM0 9H248V7H0V9Z" fill="white" />

@@ -51,7 +51,7 @@ export default function Accordion() {
               <span className="font-bruno">
                 {faq.id.toString().padStart(2, "0")}
               </span>
-              <span className="lg:h-auto h-12 flex items-center md:text-base text-xs">{faq.question}</span>
+              <span className="md:h-auto h-12 flex items-center md:text-base text-xs">{faq.question}</span>
             </span>
 
             <div onClick={() => toggleAccordion(index)} className={`absolute right-0 top-0 flex items-center cursor-pointer ${openItems[index] ? "translate-x-3.5" : "translate-x-0"}`}>
