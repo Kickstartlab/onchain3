@@ -33,6 +33,28 @@ const VerticalTabs = () => {
         }
     }, [activeTab]);
 
+
+    const [isDragging, setIsDragging] = useState(false);
+    const touchStartY = useRef(0);
+    const touchStartX = useRef(0);
+
+    const handleTouchStart = (e) => {
+        touchStartY.current = e.touches[0].clientY;
+        touchStartX.current = e.touches[0].clientX;
+        setIsDragging(false); // Reset dragging state
+    };
+
+    const handleTouchMove = (e) => {
+        const deltaY = Math.abs(e.touches[0].clientY - touchStartY.current);
+        const deltaX = Math.abs(e.touches[0].clientX - touchStartX.current);
+
+        if (deltaY > deltaX) {
+            setIsDragging(false);
+        } else {
+            setIsDragging(true);
+        }
+    };
+
     return (
         <div className="flex flex-wrap justify-center md:gap-20 gap-8">
             {/* Tabs List */}
@@ -54,8 +76,10 @@ const VerticalTabs = () => {
             <motion.div
                 ref={carouselRef}
                 className="flex lg:hidden overflow-x-auto snap-x snap-mandatory w-full"
-                drag="x"
+                drag={isDragging ? "x" : false}  // Enable drag only if horizontal movement is detected
                 dragConstraints={{ left: 0, right: 0 }}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
             >
                 {tabs.map((tab) => (
                     <motion.div
