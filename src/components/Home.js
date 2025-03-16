@@ -15,7 +15,7 @@ import Tabs from './Tabs';
 import AnimatedParagraph from './AnimatedParagraph';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 
 
 export default function Home() {
