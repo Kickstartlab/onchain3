@@ -6,6 +6,11 @@ import brand_2 from '../assets/brand_2.png';
 import brand_3 from '../assets/brand_3.png';
 import brand_4 from '../assets/brand_4.png';
 import faq from '../assets/faq.png';
+import grid1 from '../assets/grid1.png';
+import grid2 from '../assets/grid2.png';
+import grid3 from '../assets/grid3.png';
+import grid4 from '../assets/grid4.png';
+
 import Accordion from './Accordion';
 import Tabs from './Tabs';
 import AnimatedParagraph from './AnimatedParagraph';
@@ -163,25 +168,32 @@ export default function Home() {
                 <div className='container mx-auto'>
 
                     <div className='grid md:grid-cols-3 grid-cols-1 justify-center md:gap-x-3 gap-y-3 lg:w-11/12 mx-auto'>
-                        <div className='col-span-1 rounded-2xl bg-[#131313] border border-blue-50 md:p-12 p-6 text-center flex flex-col justify-end lg:h-72'>
-                            <h3 className='text-xl font-semibold'>Fast turnarounds</h3>
-                            <p>Receive lightning-fast delivery of your
-                                design request within 24 to 48 hours.</p>
+                        <div className='col-span-1 rounded-2xl bg-[#131313] border border-blue-50 md:p-6 p-6 text-center flex flex-col justify-center gap-y-4'>
+                            <img src={grid1} alt='' className='w-56 flex mx-auto'></img>
+                            <h3 className='md:text-2xl text-xl font-medium'>⚡️Speed That Matches Web3</h3>
+                            <p className='text-[#F7F7F7] text-sm'>
+                                You move fast. So do we. Get your campaigns, branding, and creative done in 24-48 hours.
+                            </p>
                         </div>
-                        <div className='col-span-2 rounded-2xl bg-[#131313] border border-blue-50 md:p-12 p-6 lg:h-72 text-center flex flex-col justify-end'>
-                            <h3 className='text-xl font-semibold'>Efficient communication</h3>
-                            <p>Receive lightning-fast delivery of your
-                                design request within 24 to 48 hours.</p>
+                        <div className='col-span-2 rounded-2xl bg-[#131313] border border-blue-50 md:p-12 p-6 text-center flex flex-col justify-center gap-y-4'>
+                            <img src={grid2} alt='' className='w-80 flex mx-auto'></img>
+                            <h3 className='md:text-2xl text-xl font-medium'>💬 No Ghosting. Just Execution.</h3>
+                            <p className='text-[#F7F7F7] text-sm'>
+                                Clear communication, real-time updates, and full transparency. No endless back-and-forths.
+                            </p>
                         </div>
-                        <div className='col-span-2 rounded-2xl bg-[#131313] border border-blue-50 md:p-12 p-6 lg:h-72 text-center flex flex-col justify-end'>
-                            <h3 className='text-xl font-semibold'>Top-tier creative team</h3>
-                            <p>We work with a network of creatives from different
-                                disciplines to deliver outstanding design solutions to you.</p>
+                        <div className='col-span-2 rounded-2xl bg-[#131313] border border-blue-50 md:p-12 p-6 text-center flex flex-col justify-center gap-y-4'>
+                            <img src={grid3} alt='' className='w-56 flex mx-auto'></img>
+                            <h3 className='md:text-2xl text-xl font-medium'>🎨 Creative That Doesn’t Miss</h3>
+                            <p className='text-[#F7F7F7] text-sm'>
+                                We bring in top-tier Web3 designers, growth strategists,<br></br> and storytellers to make your brand pop.
+                            </p>
                         </div>
-                        <div className='col-span-1 rounded-2xl bg-[#131313] border border-blue-50 md:p-12 p-6 lg:h-72 text-center flex flex-col justify-end'>
-                            <h3 className='text-xl font-semibold'>Flexibility</h3>
-                            <p>
-                                Scale up or down, pause, or cancel anytime.
+                        <div className='col-span-1 rounded-2xl bg-[#131313] border border-blue-50 md:p-12 p-6 text-center flex flex-col justify-center gap-y-4'>
+                            <img src={grid4} alt='' className='w-64 flex mx-auto'></img>
+                            <h3 className='md:text-2xl text-xl font-medium'>🔄 Scale Without the Headache</h3>
+                            <p className='text-[#F7F7F7] text-sm'>
+                                Pause, adjust, or scale your marketing anytime. No lock-in, no nonsense.
                             </p>
                         </div>
                     </div>
@@ -213,9 +225,12 @@ export default function Home() {
 
             {/* roadmap section */}
 
-            <div className="lg:px-20 px-5 lg:py-0 py-6 relative z-20">
+            <div className="lg:px-20 px-5 lg:py-12 py-6 relative z-20">
                 <div className='container mx-auto'>
-                    <div className='flex flex-wrap md:gap-28 gap-8 items-center justify-center mx-auto lg:min-h-[78vh]'>
+
+                    <h3 className='text-center md:text-3xl text-xl font-semibold lg:mb-28 mb-8'>Our Process: From Idea to Execution</h3>
+
+                    <div className='flex flex-wrap md:gap-28 gap-8 items-center justify-center mx-auto'>
                         <div data-aos='fade-right' className='flex items-center'>
                             <div className='w-0.5 bg-blue-50 md:h-96 h-72'>
                             </div>
@@ -293,7 +308,7 @@ export default function Home() {
 
             {/* text section */}
 
-            <div className="lg:px-20 px-5 relative z-20 md:min-h-[90vh] min-h-screen flex flex-col justify-center">
+            <div className="lg:px-20 px-5 relative z-20 md:min-h-[95vh] min-h-screen flex flex-col justify-center">
                 <div className='container mx-auto text-center space-y-12'>
 
                     <div data-aos='fade-in' className='text-center md:text-4xl text-2xl font-bold'>

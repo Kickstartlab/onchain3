@@ -9,13 +9,41 @@ import tab_6 from '../assets/tab_6.png'
 import tab_7 from '../assets/tab_7.png'
 
 const tabs = [
-    { id: "smm", title: "SMM", content: "Lorem Ipsum text here.", image: tab_1 },
-    { id: "community", title: "Community Management", content: "Lorem Ipsum text here.", image: tab_2 },
-    { id: "ppc", title: "PPC", content: "Lorem Ipsum text here.", image: tab_3 },
-    { id: "seo", title: "SEO", content: "Lorem Ipsum text here.", image: tab_4 },
-    { id: "influencer", title: "Influencer Marketing", content: "Lorem Ipsum text here.", image: tab_5 },
-    { id: "pr", title: "PR", content: "Lorem Ipsum text here.", image: tab_6 },
-    { id: "web3", title: "Web3 & Blockchain Development", content: "Lorem Ipsum text here.", image: tab_7 },
+    {
+        id: "smm", title: "PR",
+        content: "We get your project featured on top Web3 and crypto media outlets (Cointelegraph, Decrypt, etc.), ensuring credibility, trust, and mass exposure.",
+        image: tab_1
+    },
+    {
+        id: "community", title: "Community Management",
+        content: "Your community is your biggest asset. We manage, moderate, and grow your Discord, Telegram, and Twitter communities—keeping engagement high and your brand top of mind.",
+        image: tab_2
+    },
+    {
+        id: "ppc", title: "PPC",
+        content: "We run hyper-targeted paid ads on Google, Twitter, and Meta to drive real users to your Web3 project—maximizing ROI and ensuring cost-effective growth.",
+        image: tab_3
+    },
+    {
+        id: "seo", title: "SEO",
+        content: "We optimize your Web3 brand’s online presence, ensuring you rank high on search engines, increase organic traffic, and build long-term visibility in the crypto space.",
+        image: tab_4
+    },
+    {
+        id: "influencer", title: "Social media",
+        content: "Lorem Ipsum dollar here bank gone through Lorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone throughLorem Ipsum dollar here bank gone through",
+        image: tab_5
+    },
+    {
+        id: "pr", title: "Influencer Marketing",
+        content: "We connect you with top-tier Web3 influencers across Twitter, YouTube, and TikTok—driving awareness, credibility, and engagement with real crypto audiences.",
+        image: tab_6
+    },
+    {
+        id: "web3", title: "Web3 & Blockchain Development",
+        content: "From smart contracts to full-scale dApps, we provide cutting-edge Web3 development services—ensuring secure, scalable, and efficient blockchain solutions.",
+        image: tab_7
+    },
 ];
 
 const VerticalTabs = () => {
@@ -76,7 +104,7 @@ const VerticalTabs = () => {
             <motion.div
                 ref={carouselRef}
                 className="flex lg:hidden overflow-x-auto snap-x snap-mandatory w-full"
-                drag={isDragging ? "x" : false}  // Enable drag only if horizontal movement is detected
+                drag={isDragging ? "x" : false}
                 dragConstraints={{ left: 0, right: 0 }}
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
@@ -125,11 +153,11 @@ const VerticalTabs = () => {
                         transition={{ duration: 0.6 }}
                     />
 
-                    <h2 className="md:text-2xl text-xl font-bold mb-5">{activeTabData.title}</h2>
+                    <h2 className="md:text-2xl text-xl font-bold mb-6">{activeTabData.title}</h2>
 
-                    <p className="text-gray-300 mb-5">{activeTabData.content}</p>
+                    <p className="text-gray-300 mb-6 ">{activeTabData.content}</p>
 
-                    <button className="px-4 py-2 border border-[#313131] text-white rounded-lg hover:bg-[#2AF4FF] hover:text-black transition-all">
+                    <button className="px-4 py-3 text-blue-50 border border-[#313131] text-white rounded-lg hover:bg-[#2AF4FF] hover:text-black-50 transition-all">
                         Schedule a Call
                     </button>
                 </motion.div>

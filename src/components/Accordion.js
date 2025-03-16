@@ -3,28 +3,28 @@ import { useState } from "react";
 const faqs = [
   {
     id: 1,
-    question: "Within what timeframe will I receive my designs?",
-    answer: "Your designs will be delivered within X days.",
+    question: "How does the onboarding process work?",
+    answer: "Simple. Fill out our inquiry form, jump on a quick call, and we’ll build a strategy tailored to your Web3 project.",
   },
   {
     id: 2,
-    question: "How can I request design tasks?",
-    answer: "You can request design tasks through our online portal.",
+    question: "Is this a long-term commitment?",
+    answer: "Nope! Our services are fully flexible—you can scale, pause, or adjust anytime.",
   },
   {
     id: 3,
-    question: "What programs do you use for designs?",
-    answer: "We use Adobe Photoshop, Illustrator, and Figma.",
+    question: "How soon can we expect results?",
+    answer: "Most campaigns start gaining traction within 4-8 weeks, but paid ads can deliver faster results.",
   },
   {
     id: 4,
-    question: "What can I expect with the standard package?",
-    answer: "The standard package includes 3 revisions and priority support.",
+    question: "Do you offer influencer marketing & PR?",
+    answer: "Yes! We connect you with Web3 influencers & get press coverage on top-tier crypto media.",
   },
   {
     id: 5,
-    question: "Who will I be working with?",
-    answer: "You will be assigned a dedicated designer based on your needs.",
+    question: "What’s the pricing structure?",
+    answer: "Custom pricing based on your needs—either monthly retainer or project-based.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function Accordion() {
       {faqs.map((faq, index) => (
         <div
           key={faq.id}
-          className={`border border-[#CDFEE6CC] rounded-xl ${ openItems[index] ? "open" : "clip-path"}`}>
+          className={`border border-[#CDFEE6CC] rounded-xl ${openItems[index] ? "open" : "clip-path"}`}>
           <div
             className="w-full flex justify-between items-center lg:px-6 px-2 md:py-4 py-1.5 lg:text-xl font-semibold relative">
             <span className="flex items-center md:space-x-5 space-x-2">

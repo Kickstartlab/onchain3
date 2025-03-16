@@ -32,13 +32,13 @@ export default function Footer() {
 
               <nav>
                 <ul className="space-y-5">
-                  <li><a href="/" className="">Home</a></li>
-                  <li><a href="#about" className="">About us</a></li>
-                  <li><a href="#services" className="">Services</a></li>
-                  <li><a href="/" className="">Company</a></li>
-                  <li><a href="/" className="">Contacts</a></li>
-                  <li><a href="/" className="">Privacy Policy</a></li>
-                  <li><a href="/" className="">Terms of Service</a></li>
+                  <li><a href="/" className="hover:text-blue-50">Home</a></li>
+                  <li><a href="#about" className="hover:text-blue-50">About us</a></li>
+                  <li><a href="#services" className="hover:text-blue-50">Services</a></li>
+                  <li><a href="/" className="hover:text-blue-50">Company</a></li>
+                  <li><a href="/" className="hover:text-blue-50">Contacts</a></li>
+                  <li><a href="/" className="hover:text-blue-50">Privacy Policy</a></li>
+                  <li><a href="/" className="hover:text-blue-50">Terms of Service</a></li>
                 </ul>
               </nav>
             </div>
