@@ -10,13 +10,30 @@ import grid1 from '../assets/grid1.png';
 import grid2 from '../assets/grid2.png';
 import grid3 from '../assets/grid3.png';
 import grid4 from '../assets/grid4.png';
-
 import Accordion from './Accordion';
 import Tabs from './Tabs';
 import AnimatedParagraph from './AnimatedParagraph';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import emailjs from '@emailjs/browser';
+
+
 export default function Home() {
+
+    // const form = useRef();
+
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
+
+    //     emailjs.sendForm('service_n0qetvz', 'template_4edrw5o', form.current, 'G5pDDRgyAGcG6ireN')
+    //         .then((result) => {
+    //             console.log(result.text);
+    //             alert("Form is submitted successfully.")
+    //             window.location.reload();
+    //         }, (error) => {
+    //             console.log(error.text);
+    //         });
+    // };
 
     useEffect(() => {
         AOS.init({
@@ -362,7 +379,7 @@ export default function Home() {
 
             <div id='getintouch' className="lg:px-20 px-5 relative z-20">
                 <div className='container mx-auto'>
-                    <div className='flex flex-col items-center justify-center gap-12 lg:w-6/12 mx-auto lg:min-h-[85h] min-h-screen'>
+                    <div className='flex flex-col items-center justify-center gap-12 lg:w-6/12 mx-auto lg:min-h-[90h] min-h-screen'>
 
                         <div className='md:flex items-center justify-center gap-6 text-center md:space-y-0 space-y-4'>
                             <p data-aos='fade-in' className='font-extrabold md:text-8xl text-4xl px-2 bg-blue-50 text-black-100 rounded-2xl'>03</p>
@@ -372,8 +389,8 @@ export default function Home() {
                             </svg>
 
 
-                            <svg data-aos='fade-down' data-aos-delay='50' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-12 flex mx-auto md:hidden">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
+                            <svg data-aos='fade-down' data-aos-delay='50' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-12 flex mx-auto md:hidden">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
                             </svg>
 
                             <div data-aos='fade-in' data-aos-delay='300' className='bg-white-100 border border-blue-50 rounded-3xl text-black-100 md:text-4xl text-xl md:w-44 text-center p-5'>
@@ -393,6 +410,45 @@ export default function Home() {
                             Get A Free Proposal
                         </button>
                     </div>
+                </div>
+            </div>
+
+            {/* form section */}
+
+            <div className="lg:px-20 px-5 relative z-20 pb-6 min-h-screen">
+                <div className='container mx-auto'>
+                    <form className='space-y-6 bg-blue-50 lg:w-1/2 flex items-center justify-center mx-auto p-6 rounded-2xl'>
+                        <div className='space-y-6'>
+                            <div className='text-black-50'>
+                                <h3 className='md:text-3xl text-xl font-bold pb-2'>Get In Touch with us</h3>
+                                <p>Have any questions regarding our services? Send us your message.</p>
+                            </div>
+
+                            <div className='lg:flex items-center justify-between gap-x-6 lg:space-y-0 space-y-8'>
+                                <div data-aos='fade-right' className='space-y-2 w-full'>
+                                    <label className='text-lg font-bold text-black-50'>Name</label>
+                                    <input name="user_name" type='text' required placeholder='Enter Your Name ...' className='lg:px-5 px-3 lg:py-4 py-3 rounded-xl bg-white-100 w-full focus:outline-black-50 text-black-50'></input>
+                                </div>
+
+                                <div data-aos='fade-left' className='space-y-2 w-full'>
+                                    <label className='text-lg font-bold text-black-50'>Email</label>
+                                    <input name="user_email" type='email' required placeholder='Enter Your Email Address ...' className='lg:px-5 px-3 lg:py-4 py-3 rounded-xl bg-white-100 w-full focus:outline-black-50 text-black-50'></input>
+                                </div>
+                            </div>
+
+                            <div data-aos='fade-up' className='space-y-2'>
+                                <label className='text-lg font-bold text-black-50'>Message</label>
+                                <textarea name="message" required placeholder='Enter Your Message ...' className='lg:px-5 px-3 lg:py-4 py-2 rounded-xl bg-white-100 w-full focus:outline-black-50 text-black-50' rows='6'></textarea>
+                            </div>
+
+                            <div className='lg:flex items-center justify-between gap-x-8 lg:space-y-0 space-y-6'>
+
+                                <button data-aos='zoom-in' type="submit" value="Send" className='lg:px-6 px-4 lg:py-3 py-2 bg-black-50 rounded-lg text-lg font-bold'>
+                                    SUBMIT
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
 
